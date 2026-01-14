@@ -4,7 +4,9 @@
 
 <h2 align="center">LoongFlow：会思考、会学习的专家级Agent开发框架</h2>
 
-_让创造更自由！LoongFlow，让你的经验轻松转化为专业的 AI 生产力。_
+_让创造更自由！LoongFlow，让你的专家经验轻松转化为专业 AI 生产力。_
+
+通过PES思考范式让Agent会思考、会学习，具备长程复杂推理能力，并且能够跳过局部最优，在迭代中积累经验实现专家级效果突破。
 
 <p align="center">
     <a href="https://arxiv.org/abs/2512.24077">
@@ -113,6 +115,9 @@ _让创造更自由！LoongFlow，让你的经验轻松转化为专业的 AI 生
 - **专家级**：在通用进化和机器学习两个高难度场景验证。在陶哲轩&AlphaEvolve发布数学挑战中，有11个题目超过人类最好结果，并在7个问题上超过AlphaEvolve进化结果，取得最新SOTA；在MLE-bench评测集中40场kaggle机器学习赛事验证，取得22场金牌。同时相比传统方法，综合进化效率提升约60%。
 
 
+我们认为，设计一个能解决复杂问题的专家级Agent，**关键就在于Agent的思考模式**，思考模式决定了这个Agent能解决问题的复杂度和效果上限。LoongFlow就是为解决需要长程思考的复杂任务而生，帮助开发者快速构建领域专家级效果Agent。
+
+
 ## 🚀 快速开始
 
 ### 安装
@@ -211,24 +216,24 @@ tail -f ./agents/ml_evolve/examples/ml_example/agent.log
 
 #### Kaggle机器学习竞赛
 
-| Problem                                  | LoongFlow Evolve Result | Details                                          |
-| ---------------------------------------- | ----------------------- | ------------------------------------------------ |
-| aerial-cactus-identification             | 🥇 Gold                 | [aerial-cactus-identification](./agents/ml_evolve/examples/mlebench/competitions/simple/aerial-cactus-identification) |
-| denoising-dirty-documents                | 🥇 Gold                 | [denoising-dirty-documents](./agents/ml_evolve/examples/mlebench/competitions/simple/denoising-dirty-documents) |
-| detecting-insults-in-social-commentary   | 🥇 Gold                 | [detecting-insults-in-social-commentary](./agents/ml_evolve/examples/mlebench/competitions/simple/detecting-insults-in-social-commentary) |
-| dogs-vs-cats-redux-kernels-edition       | 🥇 Gold                 | [dogs-vs-cats-redux-kernels-edition](./agents/ml_evolve/examples/mlebench/competitions/simple/dogs-vs-cats-redux-kernels-edition) |
-| histopathologic-cancer-detection         | 🥇 Gold                 | [histopathologic-cancer-detection](./agents/ml_evolve/examples/mlebench/competitions/simple/histopathologic-cancer-detection) |
-| nomad2018-predict-transparent-conductors | 🥇 Gold                 | [nomad2018-predict-transparent-conductors](./agents/ml_evolve/examples/mlebench/competitions/simple/nomad2018-predict-transparent-conductors) |
-| plant-pathology-2020-fgvc7               | 🥇 Gold                 | [plant-pathology-2020-fgvc7](./agents/ml_evolve/examples/mlebench/competitions/simple/plant-pathology-2020-fgvc7) |
-| tabular-playground-series-dec-2021       | 🥇 Gold                 | [tabular-playground-series-dec-2021](./agents/ml_evolve/examples/mlebench/competitions/simple/tabular-playground-series-dec-2021) |
-| the-icml-2013-whale-challenge-right-whale-redux   | 🥇 Gold        | [the-icml-2013-whale-challenge-right-whale-redux](./agents/ml_evolve/examples/mlebench/competitions/simple/the-icml-2013-whale-challenge-right-whale-redux) |
-| google-quest-challenge          | 🥇 Gold                 | [google-quest-challenge](./agents/ml_evolve/examples/mlebench/competitions/medium/google-quest-challenge) |
-| plant-pathology-2021-fgvc8      | 🥇 Gold                 | [plant-pathology-2021-fgvc8](./agents/ml_evolve/examples/mlebench/competitions/medium/plant-pathology-2021-fgvc8) |
-| us-patent-phrase-to-phrase-matching     | 🥇 Gold                 | [us-patent-phrase-to-phrase-matching](./agents/ml_evolve/examples/mlebench/competitions/medium/us-patent-phrase-to-phrase-matching) |
-| predict-volcanic-eruptions-ingv-oe      | 🥇 Gold                 | [predict-volcanic-eruptions-ingv-oe](./agents/ml_evolve/examples/mlebench/competitions/hard/predict-volcanic-eruptions-ingv-oe) |
-| stanford-covid-vaccine                  | 🥇 Gold                 | [stanford-covid-vaccine](./agents/ml_evolve/examples/mlebench/competitions/hard/stanford-covid-vaccine) |
+| Problem                                  | LoongFlow Evolve Result | Details   |  Description  |
+| ---------------------------------------- | ----------------------- | --------- | ------------- |
+| aerial-cactus-identification             | 🥇 Gold                 | [aerial-cactus-identification](./agents/ml_evolve/examples/mlebench/competitions/simple/aerial-cactus-identification) | 用无人机拍的照片，识别图片里有没有仙人掌，目标是训练AI自动找到沙漠里的仙人掌。 |
+| denoising-dirty-documents                | 🥇 Gold                 | [denoising-dirty-documents](./agents/ml_evolve/examples/mlebench/competitions/simple/denoising-dirty-documents) | 把发黄、有污渍的老旧文件照片清理干净，目标是让扫描后的文字清晰可读。 |
+| detecting-insults-in-social-commentary   | 🥇 Gold                 | [detecting-insults-in-social-commentary](./agents/ml_evolve/examples/mlebench/competitions/simple/detecting-insults-in-social-commentary) | 识别社交媒体评论里有没有骂人的话，目标是自动过滤网络暴力内容。 |
+| dogs-vs-cats-redux-kernels-edition       | 🥇 Gold                 | [dogs-vs-cats-redux-kernels-edition](./agents/ml_evolve/examples/mlebench/competitions/simple/dogs-vs-cats-redux-kernels-edition) | 分类任务，把狗猫图片判别出来，目标是区分图片里是狗还是猫。 |
+| histopathologic-cancer-detection         | 🥇 Gold                 | [histopathologic-cancer-detection](./agents/ml_evolve/examples/mlebench/competitions/simple/histopathologic-cancer-detection) | 用AI看病理切片，判断有没有癌细胞，目标是帮助医生更快更准地诊断癌症。|
+| nomad2018-predict-transparent-conductors | 🥇 Gold                 | [nomad2018-predict-transparent-conductors](./agents/ml_evolve/examples/mlebench/competitions/simple/nomad2018-predict-transparent-conductors) | 预测新材料能不能当透明导体用，目标是找到能导电又透明的材料，做手机屏幕、太阳能板啥的。 |
+| plant-pathology-2020-fgvc7               | 🥇 Gold                 | [plant-pathology-2020-fgvc7](./agents/ml_evolve/examples/mlebench/competitions/simple/plant-pathology-2020-fgvc7) | 看苹果叶子照片，判断是健康还是有病，目标是帮农民及时发现病害，减少损失。 |
+| tabular-playground-series-dec-2021       | 🥇 Gold                 | [tabular-playground-series-dec-2021](./agents/ml_evolve/examples/mlebench/competitions/simple/tabular-playground-series-dec-2021) | 给一堆数据，预测结果，这是Kaggle的入门练习赛，目标是练手学数据科学。 |
+| the-icml-2013-whale-challenge-right-whale-redux   | 🥇 Gold        | [the-icml-2013-whale-challenge-right-whale-redux](./agents/ml_evolve/examples/mlebench/competitions/simple/the-icml-2013-whale-challenge-right-whale-redux) | 看鲸鱼照片，认出是哪条鲸鱼，目标是保护濒危的露脊鲸。 |
+| google-quest-challenge          | 🥇 Gold                 | [google-quest-challenge](./agents/ml_evolve/examples/mlebench/competitions/medium/google-quest-challenge) | 给问答内容打标签，判断问题好坏和答案相关性，目标是提升问答系统的质量。 |
+| plant-pathology-2021-fgvc8      | 🥇 Gold                 | [plant-pathology-2021-fgvc8](./agents/ml_evolve/examples/mlebench/competitions/medium/plant-pathology-2021-fgvc8) | 通过苹果叶子照片判断有没有病害，目标是帮助农民及时发现植物疾病。 |
+| us-patent-phrase-to-phrase-matching     | 🥇 Gold                 | [us-patent-phrase-to-phrase-matching](./agents/ml_evolve/examples/mlebench/competitions/medium/us-patent-phrase-to-phrase-matching) | 判断两个专利短语的相似程度，目标是帮助专利审查员快速找到相关专利文件。 |
+| predict-volcanic-eruptions-ingv-oe      | 🥇 Gold                 | [predict-volcanic-eruptions-ingv-oe](./agents/ml_evolve/examples/mlebench/competitions/hard/predict-volcanic-eruptions-ingv-oe) | 分析火山传感器数据预测火山喷发时间，目标是帮助提前预警减少灾害损失。 |
+| stanford-covid-vaccine                  | 🥇 Gold                 | [stanford-covid-vaccine](./agents/ml_evolve/examples/mlebench/competitions/hard/stanford-covid-vaccine) | 预测RNA疫苗的稳定性，目标是设计出更稳定的新冠mRNA疫苗。 |
 
-在MLE-bench评测集中40场kaggle机器学习赛事验证，取得22个金牌，完整结果将在完成全部赛事后公布。
+在MLE-bench评测集中40场kaggle机器学习赛事验证，已取得22个金牌，完整结果将在完成全部赛事后公布。
 
 #### 其他尝试
 
