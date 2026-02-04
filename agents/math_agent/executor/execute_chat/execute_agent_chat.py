@@ -341,7 +341,7 @@ class EvolveExecuteAgentChat(Worker):
             )
             await self.install_missing_package(context, evaluation_result)
 
-        evaluation_result_json = json.dumps(evaluation_result.to_dict(), ensure_ascii=False)
+        evaluation_result_json = json.dumps(evaluation_result.to_dict(), ensure_ascii=False, indent=2)
         Workspace.write_executor_file(
             context,
             f"{candidate_path}/evaluation_{random_str}.json",

@@ -429,7 +429,7 @@ class RedisMemory(EvolveMemory):
                     solutions_path, f"{solution.solution_id}.json"
                 )
                 with open(solution_path, "w") as f:
-                    json.dump(solution.to_dict(), f, indent=4)
+                    json.dump(solution.to_dict(), f, ensure_ascii=False, indent=2)
 
             feature_stats_raw = self.redis.hgetall(self.feature_stats_key)
             # Convert bytes to string keys and values
@@ -522,7 +522,7 @@ class RedisMemory(EvolveMemory):
                 )
 
             with open(os.path.join(checkpoint_path, "metadata.json"), "w") as f:
-                json.dump(metadata, f, indent=4, default=bytes_encoder)
+                json.dump(metadata, f, ensure_ascii=False, indent=2, default=bytes_encoder)
 
             logger.info(
                 f"Saved checkpoint with {len(solutions)} programs to {checkpoint_path}"
@@ -547,7 +547,7 @@ class RedisMemory(EvolveMemory):
             if best_solution:
                 best_solution_path = os.path.join(checkpoint_path, "best_solution.json")
                 with open(best_solution_path, "w") as f:
-                    json.dump(best_solution.to_dict(), f, indent=4)
+                    json.dump(best_solution.to_dict(), f, ensure_ascii=False, indent=2)
 
             logger.info(f"Saved checkpoint with tag {tag} to {checkpoint_path}")
 
